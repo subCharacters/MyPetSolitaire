@@ -1,12 +1,28 @@
-.vscode/
-Assets/
-!Assets/Scripts
-Library/
-Logs/
-Packages/
-ProjectSettings/
-Temp/
-UserSettings/
-Assembly-CSharp.csproj
-Assembly-CSharp-Editor.csproj
-MyPetSolitaire.sln
+# 1. 루트의 모든 파일/폴더를 일단 무시
+/*
+
+# 2. 단, .gitignore 자신은 무시하지 않음
+!/.gitignore
+
+# 3. Assets 폴더는 무시 대상에서 해제
+!/Assets/
+
+# 4. Scripts 폴더와 그 안의 모든 파일은 다시 허용
+!/Assets/Scripts/
+!/Assets/Scripts/**
+
+# 5. Assets 안의 나머지는 무시
+/Assets/*
+
+# 6. 나머지 Unity 불필요 폴더/파일들 무시
+/.vscode/
+/Library/
+/Logs/
+/Packages/
+/ProjectSettings/
+/Temp/
+/UserSettings/
+
+# 7. .csproj 와 솔루션 파일도 무시
+*.csproj
+*.sln
